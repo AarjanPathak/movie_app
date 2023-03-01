@@ -21,8 +21,10 @@ function Navbar() {
   return (
     <div className={`nav  ${show && 'nav--black'}`}>
         <div className='nav--contents'>
-            <img className='nav--logo' src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png" alt=""/>
-            <img className='nav--avatar' src="https://i0.wp.com/www.nintendo-town.fr/wp-content/uploads/2022/01/arcane-jinx.jpg?fit=1024%2C576&ssl=1" alt=""/>
+            <h1 className='nav--logo'>
+                OMOVIES
+            </h1>
+            <img className='nav--avatar' src="http://cdn.onlinewebfonts.com/svg/img_162386.png" alt=""/>
         </div>
     </div>
   )

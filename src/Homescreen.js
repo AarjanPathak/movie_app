@@ -2,12 +2,35 @@ import React from 'react';
 import "./Homescreen.css";
 import Navbar from "./Navbar";
 import Banner from "./Banner";
+import requests from './Requests';
+import Row from './Row';
 
 function Homescreen() {
   return (
     <div className='homeScreen'>
         <Navbar />
         <Banner />
+        <Row 
+          title="Top Rated"  fetchUrl={requests.fetchTopRated} isLarge={true}
+        />
+        <Row 
+          title="Trending"  fetchUrl={requests.fetchTrending} 
+        />
+        <Row 
+          title="Documentaries"  fetchUrl={requests.fetchDocumentaries}
+        />
+        <Row 
+          title="Romance Movies"  fetchUrl={requests.fetchRomanceMovies}
+        />
+        <Row 
+          title="Horror Movies"  fetchUrl={requests.fetchHorrorMovies}
+        />
+        <Row 
+          title="Comedy Movies"  fetchUrl={requests.fetchComedyMovies}
+        />
+        <Row 
+          title="Action Movies"  fetchUrl={requests.fetchActionMovies}
+        />
     </div>
   )
 }
