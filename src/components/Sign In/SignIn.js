@@ -1,11 +1,23 @@
 import React from 'react'
 import './SignIn.css'
+import { auth } from '../firebase';
+import { useRef } from 'react';
 
 function SignIn() {
 
-    
+    const emailRef = useRef();
+    const passwordRef = useRef();
+
     const signIn = (e) =>{
         e.preventDefault();
+        auth.signInWithEmailAndPassword(
+            emailRef.current.value,
+            passwordRef.current.value
+        ).then((authUser)=>{
+            console.log(authUser);
+        }).catch((error)=>{
+            alert(error.message);
+        });
     }
 
   return (
@@ -14,9 +26,9 @@ function SignIn() {
             <form>
                 <h1>Sign In</h1>
                 <label htmlFor='email'>Email</label>
-                <input type="email" name='email' placeholder='Email'></input>
+                <input ref = {emailRef} type="email" name='email' placeholder='Email'></input>
                 <label htmlFor='password'>Password</label>
-                <input type="password" name='password' placeholder='Password'></input>
+                <input ref = {passwordRef} type="password" name='password' placeholder='Password'></input>
                 <button onClick={signIn} type='submit'>Sign</button>
             </form>
     </div>
