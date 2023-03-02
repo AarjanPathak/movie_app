@@ -2,20 +2,18 @@ import React, { useState } from 'react';
 import './LoginScreen.css';
 import logo from '../logo.png'
 import SignIn from '../Sign In/SignIn';
+import Register from '../Register/Register';
 
 function LoginScreen() {
 
   const[signIn, setSignIn] = useState(false)  
-
-  function handleClick(){
-    setSignIn(true)
-  }
+  const[register, setRegister] = useState(false)
 
   return (
     <div className='loginScreen'>
         <div className='loginScreen--background'>
             <img className="loginScreen--logo" src={logo} />
-            <button  onClick={handleClick}  className='sign-in-btn'>Sign In</button>
+            <button  onClick={()=>setSignIn(true)}  className='sign-in-btn'>Sign In</button>
             <div className='loginScreen--gradient'/>
         </div>
         
@@ -27,9 +25,9 @@ function LoginScreen() {
           <h1>Watch your favorite Movies and TV series.</h1>
           <h3>Not a member? Register now</h3>
           <div className='loginScreen--input'>
-            <form>
-              <button className='loginScreen--btn'>REGISTER</button>
-            </form>
+              <button  onClick={()=>setRegister(true)}  className='loginScreen--btn'>REGISTER</button>
+              <Register trigger={register}>
+              </Register>
           </div>
           </>}
         </div>

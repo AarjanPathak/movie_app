@@ -2,6 +2,12 @@ import React from 'react'
 import './SignIn.css'
 
 function SignIn() {
+
+    
+    const signIn = (e) =>{
+        e.preventDefault();
+    }
+
   return (
     <div className='signIn--body'>
         <span class="material-symbols-outlined">close</span>
@@ -11,7 +17,7 @@ function SignIn() {
                 <input type="email" name='email' placeholder='Email'></input>
                 <label htmlFor='password'>Password</label>
                 <input type="password" name='password' placeholder='Password'></input>
-                <button type='submit'>Sign</button>
+                <button onClick={signIn} type='submit'>Sign</button>
             </form>
     </div>
   )
