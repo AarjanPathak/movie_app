@@ -42,7 +42,7 @@ function Banner() {
         <div className='banner--info'>
           <h1 className='banner--date'>{movie?.release_date}</h1>
           <div className='rating'>
-            <span class="material-symbols-outlined  star">star</span>
+            <span className="material-symbols-outlined  star">star</span>
             <h1 className='banner--ratings'>{Math.round(movie.vote_average * 10)/10}</h1>
           </div>
           <h1 className='pg'>PG-13</h1>
