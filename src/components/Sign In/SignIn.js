@@ -2,12 +2,8 @@ import React from 'react'
 import './SignIn.css'
 import { auth } from '../firebase';
 import { useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 function SignIn() {
-
-    const navigate = useNavigate();
-
     const emailRef = useRef();
     const passwordRef = useRef();
 
