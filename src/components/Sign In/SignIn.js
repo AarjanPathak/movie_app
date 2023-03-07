@@ -2,8 +2,11 @@ import React from 'react'
 import './SignIn.css'
 import { auth } from '../firebase';
 import { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function SignIn() {
+
+    const navigate = useNavigate();
 
     const emailRef = useRef();
     const passwordRef = useRef();
@@ -22,7 +25,7 @@ function SignIn() {
 
   return (
     <div className='signIn--body'>
-        <span class="material-symbols-outlined">close</span>
+        <span onClick={()=>{navigate('/login')}}  class="material-symbols-outlined">close</span>
             <form>
                 <h1>Sign In</h1>
                 <label htmlFor='email'>Email</label>
