@@ -1,0 +1,43 @@
+.profile{
+    position: relative;
+    height: 100vh;
+    color: white;
+}
+
+.profile--body{
+    max-width: 600px;
+    padding: 10px;
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.profile--info{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 50px
+}
+
+.profile--logo{
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.signOut--btn{
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.profile--plans > h2{
+    margin-bottom: 20px;
+}
+
+.plans{
+    margin-right: 40px;
+}

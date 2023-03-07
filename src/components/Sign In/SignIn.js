@@ -21,7 +21,7 @@ function SignIn() {
 
   return (
     <div className='signIn--body'>
-        <span onClick={()=>{navigate('/login')}}  class="material-symbols-outlined">close</span>
+        <span class="material-symbols-outlined">close</span>
             <form>
                 <h1>Sign In</h1>
                 <label htmlFor='email'>Email</label>

@@ -7,12 +7,11 @@ import { useEffect } from 'react';
 import { auth } from './components/firebase';
 import {useDispatch, useSelector} from 'react-redux'
 import { login, logout, selectUser } from './features/userSlice';
-import ProfileScreen from './components/Profile/ProfileScreen';
-import SignIn from './components/Sign In/SignIn';
+import ProfileScreen from './components/Profile/ProfileScreen';;
 
 function App() {
 
-  const user = null;
+  const user = useSelector(selectUser);
   const dispatch = useDispatch();
 
   useEffect(()=>{
@@ -43,8 +42,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Homescreen/>} />
           <Route path="/profile" element={<ProfileScreen/>}></Route>
-          <Route path="/login" element={<LoginScreen/>}></Route>
-          <Route path='/signin' element={<SignIn/>}></Route>
         </Routes>
         )}
       </Router>

@@ -3,7 +3,6 @@ import './LoginScreen.css';
 import logo from '../logo.png'
 import SignIn from '../Sign In/SignIn';
 import Register from '../Register/Register';
-import { useNavigate } from 'react-router-dom';
 
 function LoginScreen() {
   

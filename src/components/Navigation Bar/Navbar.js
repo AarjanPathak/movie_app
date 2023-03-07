@@ -24,8 +24,8 @@ function Navbar() {
   return (
     <div className={`nav  ${show && 'nav--black'}`}>
         <div className='nav--contents'>
-            <img className='nav--logo' src={logo}/>
-            <img onClick={()=>{navigate("/profile")}}  className='nav--avatar' src="http://cdn.onlinewebfonts.com/svg/img_162386.png" alt=""/>
+            <img onClick={()=>{navigate('/')}}  className='nav--logo' src={logo}/>
+            <img onClick={()=>{navigate('/profile')}}  className='nav--avatar' src="http://cdn.onlinewebfonts.com/svg/img_162386.png" alt=""/>
         </div>
     </div>
   )
